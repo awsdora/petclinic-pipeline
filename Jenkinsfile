@@ -1,6 +1,6 @@
 pipeline {
     // run on jenkins nodes tha has slave-01 label
-    agent { label 'sensen-build-slave-01' }
+    agent any
     // global env variables
     environment {
         EMAIL_RECIPIENTS = 'akhilreddyjirra@gmail.com'
