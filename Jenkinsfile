@@ -139,7 +139,7 @@ pipeline {
                             sh "git push -f --tags"
                         }
                         sh "'${mvnHome}/bin/mvn' -Dmaven.test.skip=true  versions:set  -DgenerateBackupPoms=false -DnewVersion=${v}"
-                        sh "'${mvnHome}/bin/mvn' -Dmaven.test.skip=true clean deploy"
+                        sh "'${mvnHome}/bin/mvn' -Dmaven.test.skip=true clean deploy -s settings.xml"
 
                     } else {
                         error "Release is not possible. as build is not successful"
