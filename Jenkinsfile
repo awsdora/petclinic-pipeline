@@ -42,7 +42,7 @@ pipeline {
 
                     }
                 // cucumber reports collection
-                //cucumber buildStatus: null, fileIncludePattern: '**/cucumber.json', jsonReportDirectory: 'target', sortingMethod: 'ALPHABETICAL'
+                cucumber buildStatus: null, fileIncludePattern: '**/cucumber.json', jsonReportDirectory: 'target', sortingMethod: 'ALPHABETICAL'
                 }
             }
         stage('Sonar scan execution') {
@@ -179,10 +179,10 @@ pipeline {
             }
         }
         stage('ACC E2E tests') {
-            when {
+           // when {
                 // check if branch is master
-                branch 'master'
-            }
+               // branch 'master'
+            //}
             steps {
                 // give some time till the deployment is done, so we wait 45 seconds
                 sleep(45)
