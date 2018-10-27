@@ -193,7 +193,7 @@ pipeline {
                             script {
                                 def mvnHome = tool 'Maven 3.5.4'
                                 // NOTE : if you change the test class name change it here as well
-                                sh "'${mvnHome}/bin/mvn' -Dtest=ApplicationE2E surefire:test"
+                                sh "'${mvnHome}/bin/mvn' -DfailIfNoTests=false -Dtest=ApplicationE2E surefire:test"
                             }
 
                         }
