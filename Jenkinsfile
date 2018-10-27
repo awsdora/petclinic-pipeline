@@ -4,6 +4,7 @@ pipeline {
     // global env variables
     environment {
         EMAIL_RECIPIENTS = 'akhilreddyjirra@gmail.com'
+        GIT_SSH_COMMAND = "ssh -o StrictHostKeyChecking=no"
     }
     stages {
 
